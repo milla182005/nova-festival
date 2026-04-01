@@ -109,3 +109,29 @@ body {
   background: var(--magenta);
   color: var(--paper);
 }
+
+/* ── MARQUEE ── */
+.marquee-wrap {
+  background: var(--acid);
+  color: var(--ink);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 14px 0;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.marquee-inner {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-inner span {
+  margin: 0 32px;
+}
+
+.marquee-inner .dot {
+  color: var(--magenta);
+}

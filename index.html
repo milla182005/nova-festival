@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NØVA Festival</title>
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono&display=swap" rel="stylesheet" />
-
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
@@ -35,35 +33,107 @@
   </section>
 
   <!-- MARQUEE TICKER -->
-<div class="marquee-wrap">
-  <div class="marquee-inner">
-    <span>NØVA FESTIVAL</span>
-    <span class="dot">✦</span>
-    <span>18 — 20 JUILLET</span>
-    <span class="dot">✦</span>
-    <span>PARIS</span>
-    <span class="dot">✦</span>
-    <span>40+ ARTISTES</span>
-    <span class="dot">✦</span>
-    <span>3 SCÈNES</span>
-    <span class="dot">✦</span>
-    <span>BILLETS DISPONIBLES</span>
-    <span class="dot">✦</span>
-    <!-- On duplique pour que le défilement soit infini -->
-    <span>NØVA FESTIVAL</span>
-    <span class="dot">✦</span>
-    <span>18 — 20 JUILLET</span>
-    <span class="dot">✦</span>
-    <span>PARIS</span>
-    <span class="dot">✦</span>
-    <span>40+ ARTISTES</span>
-    <span class="dot">✦</span>
-    <span>3 SCÈNES</span>
-    <span class="dot">✦</span>
-    <span>BILLETS DISPONIBLES</span>
-    <span class="dot">✦</span>
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      <span>NØVA FESTIVAL</span>
+      <span class="dot">✦</span>
+      <span>18 — 20 JUILLET</span>
+      <span class="dot">✦</span>
+      <span>PARIS</span>
+      <span class="dot">✦</span>
+      <span>40+ ARTISTES</span>
+      <span class="dot">✦</span>
+      <span>3 SCÈNES</span>
+      <span class="dot">✦</span>
+      <span>BILLETS DISPONIBLES</span>
+      <span class="dot">✦</span>
+      <span>NØVA FESTIVAL</span>
+      <span class="dot">✦</span>
+      <span>18 — 20 JUILLET</span>
+      <span class="dot">✦</span>
+      <span>PARIS</span>
+      <span class="dot">✦</span>
+      <span>40+ ARTISTES</span>
+      <span class="dot">✦</span>
+      <span>3 SCÈNES</span>
+      <span class="dot">✦</span>
+      <span>BILLETS DISPONIBLES</span>
+      <span class="dot">✦</span>
+    </div>
   </div>
-</div>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <p class="countdown-label">Le festival commence dans</p>
+    <div class="countdown">
+      <div class="countdown-item">
+        <span id="days">00</span>
+        <p>Jours</p>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span id="hours">00</span>
+        <p>Heures</p>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span id="minutes">00</span>
+        <p>Minutes</p>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span id="seconds">00</span>
+        <p>Secondes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINEUP PREVIEW -->
+<section class="lineup-section">
+  <div class="lineup-header">
+    <p class="section-label">Line-Up 2026</p>
+    <a href="lineup.html" class="btn-outline">Voir tout le lineup →</a>
+  </div>
+  <div class="lineup-grid">
+
+    <div class="artist-card">
+      <div class="artist-bg bg-1"></div>
+      <div class="artist-info">
+        <span class="artist-day">JOUR 1</span>
+        <h3 class="artist-name">OKLOU</h3>
+        <p class="artist-genre">Électronique · 22:00</p>
+      </div>
+    </div>
+
+    <div class="artist-card">
+      <div class="artist-bg bg-2"></div>
+      <div class="artist-info">
+        <span class="artist-day">JOUR 1</span>
+        <h3 class="artist-name">BAKAR</h3>
+        <p class="artist-genre">Indie Rock · 20:30</p>
+      </div>
+    </div>
+
+    <div class="artist-card">
+      <div class="artist-bg bg-3"></div>
+      <div class="artist-info">
+        <span class="artist-day">JOUR 2</span>
+        <h3 class="artist-name">FKA TWIGS</h3>
+        <p class="artist-genre">R&B · 23:30</p>
+      </div>
+    </div>
+
+    <div class="artist-card">
+      <div class="artist-bg bg-4"></div>
+      <div class="artist-info">
+        <span class="artist-day">JOUR 3</span>
+        <h3 class="artist-name">SHELLAC</h3>
+        <p class="artist-genre">Post-Rock · 21:00</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

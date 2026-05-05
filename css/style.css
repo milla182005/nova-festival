@@ -135,3 +135,156 @@ body {
 .marquee-inner .dot {
   color: var(--magenta);
 }
+
+/* ── COUNTDOWN ── */
+.countdown-section {
+  padding: 80px 48px;
+  text-align: center;
+  background: var(--ink);
+}
+
+.countdown-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(240, 237, 228, 0.4);
+  margin-bottom: 40px;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.countdown-item span {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 1;
+  color: var(--paper);
+  letter-spacing: -0.04em;
+}
+
+.countdown-item p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(240, 237, 228, 0.4);
+}
+
+.countdown-sep {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 7rem);
+  color: var(--acid);
+  line-height: 1;
+  margin-bottom: 28px;
+}
+
+/* ── LINEUP SECTION ── */
+.lineup-section {
+  padding: 80px 48px;
+  background: var(--ink);
+}
+
+.lineup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.section-label {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--paper);
+  letter-spacing: -0.02em;
+}
+
+.btn-outline {
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--paper);
+  padding-bottom: 4px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-outline:hover {
+  color: var(--acid);
+  border-color: var(--acid);
+}
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.artist-card {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.artist-bg {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s ease;
+}
+
+.artist-card:hover .artist-bg {
+  transform: scale(1.06);
+}
+
+.bg-1 { background: linear-gradient(135deg, #FF2D78 0%, #7000FF 100%); }
+.bg-2 { background: linear-gradient(135deg, #00F0FF 0%, #0050FF 100%); }
+.bg-3 { background: linear-gradient(135deg, #C8FF00 0%, #00C87E 100%); }
+.bg-4 { background: linear-gradient(135deg, #FF7000 0%, #FF2D78 100%); }
+
+.artist-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+}
+
+.artist-day {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 8px;
+}
+
+.artist-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--paper);
+  margin-bottom: 6px;
+}
+
+.artist-genre {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.05em;
+}

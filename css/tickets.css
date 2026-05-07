@@ -1,0 +1,317 @@
+/* ── TICKETS HERO ── */
+.tickets-hero {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 120px 48px 64px;
+  background: radial-gradient(ellipse at 80% 20%, #3a0060 0%, var(--ink) 70%);
+}
+
+.tickets-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(4rem, 10vw, 9rem);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+/* ── TICKETS GRID ── */
+.tickets-section {
+  padding: 80px 48px;
+  background: var(--ink);
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ticket-card {
+  border: 1px solid rgba(240, 237, 228, 0.1);
+  padding: 40px;
+  position: relative;
+  transition: border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-card:hover {
+  border-color: var(--acid);
+}
+
+.ticket-featured {
+  border-color: var(--acid);
+}
+
+.ticket-badge {
+  display: inline-block;
+  background: var(--acid);
+  color: var(--ink);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  padding: 4px 12px;
+  margin-bottom: 16px;
+}
+
+.ticket-type {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--acid);
+  margin-bottom: 16px;
+}
+
+.ticket-price {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+.ticket-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-grow: 1;
+}
+
+.ticket-features li {
+  font-size: 0.85rem;
+  color: rgba(240, 237, 228, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticket-features li::before {
+  content: '→';
+  color: var(--acid);
+}
+
+.ticket-btn {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.ticket-btn:hover {
+  background: var(--magenta);
+  color: var(--paper);
+}
+
+/* ── FORMULAIRE ── */
+.form-section {
+  padding: 0;
+  background: var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+.form-left {
+  background: linear-gradient(135deg, #3a0060 0%, #FF2D78 100%);
+  padding: 80px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-left::before {
+  content: '♪';
+  position: absolute;
+  font-size: 20rem;
+  color: rgba(255,255,255,0.05);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-left-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -0.03em;
+  color: var(--paper);
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.form-left-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.form-left-info div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.form-left-info span {
+  background: rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+.form-right {
+  padding: 80px 48px;
+  background: #0f0f0f;
+}
+
+.form-container {
+  max-width: 100%;
+}
+
+.form-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  letter-spacing: -0.03em;
+  color: var(--paper);
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  font-size: 0.85rem;
+  color: rgba(240, 237, 228, 0.4);
+  margin-bottom: 40px;
+}
+
+.form-subtitle span {
+  color: var(--acid);
+  font-weight: 700;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(240, 237, 228, 0.4);
+}
+
+.form-group input,
+.form-group select {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(240, 237, 228, 0.1);
+  padding: 14px 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--paper);
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+  width: 100%;
+}
+
+.form-group select option {
+  background: #0f0f0f;
+  color: var(--paper);
+}
+
+.form-group input::placeholder {
+  color: rgba(240, 237, 228, 0.2);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--acid);
+  background: rgba(200, 255, 0, 0.04);
+}
+
+.form-group input.error {
+  border-color: var(--magenta);
+}
+
+.error-msg {
+  font-size: 0.7rem;
+  color: var(--magenta);
+  min-height: 16px;
+}
+
+.form-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.form-check input {
+  width: auto;
+  border: none;
+  accent-color: var(--acid);
+  padding: 0;
+  background: transparent;
+}
+
+.form-check label {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.85rem;
+  color: rgba(240, 237, 228, 0.5);
+}
+
+.btn-submit {
+  margin-top: 24px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  padding: 20px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+}
+
+/* ── SUCCESS MESSAGE ── */
+.success-msg {
+  display: none;
+  margin-top: 32px;
+  padding: 24px;
+  background: rgba(200, 255, 0, 0.08);
+  border: 1px solid var(--acid);
+}
+
+.success-msg h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--acid);
+}
+
+.success-msg p {
+  font-size: 0.85rem;
+  color: rgba(240, 237, 228, 0.6);
+}

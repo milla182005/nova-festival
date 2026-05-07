@@ -1,0 +1,139 @@
+/* ── LINEUP HERO ── */
+.lineup-hero {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 120px 48px 64px;
+  background: radial-gradient(ellipse at 20% 80%, #00C87E 0%, #3a0060 50%, var(--ink) 100%);
+}
+
+.lineup-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(4rem, 10vw, 9rem);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+/* ── FILTRES ── */
+.filters-section {
+  padding: 32px 48px;
+  background: var(--ink);
+  border-bottom: 1px solid rgba(240, 237, 228, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filters-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(240, 237, 228, 0.3);
+  min-width: 60px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(240, 237, 228, 0.15);
+  color: rgba(240, 237, 228, 0.5);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.filter-btn:hover {
+  border-color: var(--acid);
+  color: var(--acid);
+}
+
+.filter-btn.active {
+  background: var(--acid);
+  border-color: var(--acid);
+  color: var(--ink);
+}
+
+/* ── GRILLE ARTISTES ── */
+.artists-section {
+  padding: 48px;
+  background: var(--ink);
+  min-height: 60vh;
+}
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.artist-card-full {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.artist-card-full .artist-bg {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s ease;
+}
+
+.artist-card-full:hover .artist-bg {
+  transform: scale(1.06);
+}
+
+.bg-5 { background: linear-gradient(135deg, #7000FF 0%, #00F0FF 100%); }
+.bg-6 { background: linear-gradient(135deg, #FF7000 0%, #C8FF00 100%); }
+
+.artist-card-full .artist-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+}
+
+.artist-card-full .artist-day {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 8px;
+}
+
+.artist-card-full .artist-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--paper);
+  margin-bottom: 6px;
+}
+
+.artist-card-full .artist-genre {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.05em;
+}
+
+.artist-card-full.hidden {
+  display: none;
+}

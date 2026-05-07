@@ -1,0 +1,114 @@
+/* ── MAP HERO ── */
+.map-hero {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 120px 48px 48px;
+  background: radial-gradient(ellipse at 70% 30%, #003a60 0%, #3a0060 50%, var(--ink) 100%);
+}
+
+.map-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(4rem, 10vw, 9rem);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+/* ── LEGENDE ── */
+.map-info {
+  background: var(--ink);
+  padding: 24px 48px;
+  border-bottom: 1px solid rgba(240, 237, 228, 0.08);
+}
+
+.map-legend {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: rgba(240, 237, 228, 0.6);
+  letter-spacing: 0.05em;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.dot-main      { background: #FF2D78; }
+.dot-electro   { background: #C8FF00; }
+.dot-discovery { background: #00F0FF; }
+.dot-food      { background: #FF7000; }
+
+/* ── CARTE ── */
+#map {
+  height: 550px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* ── SCENES ── */
+.scenes-section {
+  padding: 64px 48px;
+  background: var(--ink);
+}
+
+.scenes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.scene-card {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid rgba(240, 237, 228, 0.08);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.scene-card:hover {
+  border-color: rgba(240, 237, 228, 0.2);
+}
+
+.scene-color {
+  width: 6px;
+  flex-shrink: 0;
+}
+
+.sc-main      { background: #FF2D78; }
+.sc-electro   { background: #C8FF00; }
+.sc-discovery { background: #00F0FF; }
+
+.scene-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scene-content h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+}
+
+.scene-content p {
+  font-size: 0.8rem;
+  color: rgba(240, 237, 228, 0.4);
+  letter-spacing: 0.05em;
+}

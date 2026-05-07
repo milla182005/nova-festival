@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NØVA Festival — Plan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/map.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">NØVA</a>
+    <ul class="nav-links">
+      <li><a href="lineup.html">Lineup</a></li>
+      <li><a href="map.html">Plan</a></li>
+      <li><a href="tickets.html">Billets</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="map-hero">
+    <a href="index.html" class="back-link">← Retour à l'accueil</a>
+    <p class="hero-eyebrow">Parc de la Villette, Paris</p>
+    <h1 class="map-title">Plan du Festival</h1>
+  </section>
+
+  <!-- LEGENDES -->
+  <section class="map-info">
+    <div class="map-legend">
+      <div class="legend-item">
+        <span class="legend-dot dot-main"></span>
+        <span>Scène Principale</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot dot-electro"></span>
+        <span>Scène Électro</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot dot-discovery"></span>
+        <span>Scène Découverte</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot dot-food"></span>
+        <span>Zone Food & Bar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTE -->
+  <div id="map"></div>
+
+  <!-- INFOS SCENES -->
+  <section class="scenes-section">
+    <div class="scenes-grid">
+
+      <div class="scene-card">
+        <div class="scene-color sc-main"></div>
+        <div class="scene-content">
+          <h3>Scène Principale</h3>
+          <p>Capacité : 8 000 personnes</p>
+          <p>Artistes têtes d'affiche</p>
+        </div>
+      </div>
+
+      <div class="scene-card">
+        <div class="scene-color sc-electro"></div>
+        <div class="scene-content">
+          <h3>Scène Électro</h3>
+          <p>Capacité : 4 000 personnes</p>
+          <p>Sets DJ & musique électronique</p>
+        </div>
+      </div>
+
+      <div class="scene-card">
+        <div class="scene-color sc-discovery"></div>
+        <div class="scene-content">
+          <h3>Scène Découverte</h3>
+          <p>Capacité : 1 500 personnes</p>
+          <p>Artistes émergents</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">NØVA</div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">Newsletter</a>
+        <a href="#">Presse</a>
+      </div>
+      <div class="footer-links">
+        <a href="#">FAQ</a>
+        <a href="#">Accessibilité</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NØVA Festival. Tous droits réservés.</span>
+      <span>Paris, France</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
+
+</body>
+</html>

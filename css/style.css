@@ -288,3 +288,142 @@ body {
   color: rgba(255,255,255,0.5);
   letter-spacing: 0.05em;
 }
+
+/* ── STATS ── */
+.stats-section {
+  padding: 80px 48px;
+  background: var(--acid);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 6vw, 5rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--ink);
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(8, 8, 8, 0.5);
+  margin-top: 8px;
+}
+
+/* ── MANIFESTE ── */
+.manifesto-section {
+  padding: 120px 48px;
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+
+.manifesto-section::before {
+  content: 'NØVA';
+  position: absolute;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(8rem, 20vw, 18rem);
+  color: rgba(8, 8, 8, 0.04);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: -0.05em;
+}
+
+.manifesto-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.manifesto-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 24px 0 32px;
+  color: var(--ink);
+}
+
+.manifesto-title em {
+  font-style: normal;
+  color: var(--magenta);
+}
+
+.manifesto-body {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.8;
+  color: rgba(8, 8, 8, 0.6);
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: #111111;
+  padding: 64px 48px 32px;
+  border-top: 1px solid rgba(240, 237, 228, 0.08);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-brand {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--acid);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: rgba(240, 237, 228, 0.4);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--paper);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(240, 237, 228, 0.06);
+  font-size: 0.75rem;
+  color: rgba(240, 237, 228, 0.2);
+  letter-spacing: 0.05em;
+}

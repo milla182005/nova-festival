@@ -1,3 +1,44 @@
+// ── CURSEUR CUSTOM ──
+const cursor = document.createElement('div');
+const cursorRing = document.createElement('div');
+
+cursor.id = 'cursor';
+cursorRing.id = 'cursor-ring';
+
+document.body.appendChild(cursor);
+document.body.appendChild(cursorRing);
+
+let mouseX = 0, mouseY = 0;
+let ringX = 0, ringY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursor.style.left = mouseX + 'px';
+  cursor.style.top = mouseY + 'px';
+});
+
+function animateRing() {
+  ringX += (mouseX - ringX) * 0.12;
+  ringY += (mouseY - ringY) * 0.12;
+  cursorRing.style.left = ringX + 'px';
+  cursorRing.style.top = ringY + 'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+
+// Effet hover sur les liens et boutons
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.classList.add('cursor-hover');
+    cursorRing.classList.add('cursor-hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursor-hover');
+    cursorRing.classList.remove('cursor-hover');
+  });
+});
+
 // ── GSAP ANIMATIONS ──
 gsap.registerPlugin(ScrollTrigger);
 

@@ -16,6 +16,46 @@ body {
   background: var(--ink);
   color: var(--paper);
   font-family: 'Space Mono', monospace;
+  cursor: none;
+}
+
+/* ── CURSEUR CUSTOM ── */
+#cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--acid);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background 0.2s;
+  mix-blend-mode: exclusion;
+}
+
+#cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--acid);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, border-color 0.3s;
+  mix-blend-mode: exclusion;
+}
+
+#cursor.cursor-hover {
+  width: 20px;
+  height: 20px;
+  background: var(--magenta);
+}
+
+#cursor-ring.cursor-hover {
+  width: 60px;
+  height: 60px;
+  border-color: var(--magenta);
 }
 
 /* ── NAVBAR ── */
@@ -237,7 +277,7 @@ body {
   position: relative;
   aspect-ratio: 3/4;
   overflow: hidden;
-  cursor: pointer;
+  cursor: none;
 }
 
 .artist-bg {

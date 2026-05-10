@@ -478,3 +478,63 @@ body {
   color: rgba(240, 237, 228, 0.2);
   letter-spacing: 0.05em;
 }
+
+/* ── RESPONSIVE MOBILE ── */
+@media (max-width: 768px) {
+
+  /* Cache le curseur custom sur mobile */
+  #cursor, #cursor-ring { display: none; }
+  body { cursor: auto; }
+
+  /* Navbar */
+  .navbar { padding: 20px 24px; }
+  .nav-links { display: none; }
+
+  /* Hero */
+  .hero { padding: 0 24px; }
+  .hero-title {
+    font-size: clamp(2.5rem, 15vw, 5rem);
+    overflow: hidden;
+    width: 100%;
+    word-break: break-word;
+}
+
+  /* Countdown */
+  .countdown-section { padding: 48px 24px; }
+  .countdown {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .countdown-item span {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+  .countdown-sep {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  /* Lineup */
+  .lineup-section { padding: 48px 24px; }
+  .lineup-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .lineup-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Stats */
+  .stats-section { padding: 48px 24px; }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Manifeste */
+  .manifesto-section { padding: 64px 24px; }
+
+  /* Footer */
+  .footer { padding: 48px 24px 24px; }
+  .footer-top {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
